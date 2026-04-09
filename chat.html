@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKILLEVE — Chat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-chat">
+
+<div class="orb orb-1 orb-dim"></div>
+
+<!-- PROFILE SIDEBAR -->
+<div class="profile-sidebar glass" id="profileSidebar">
+  <div class="psb-header">
+    <div class="psb-avatar" id="psbAvatar">U</div>
+    <div>
+      <div class="psb-name" id="psbName">Guest User</div>
+      <div class="psb-email" id="psbEmail">guest@skilleve.app</div>
+    </div>
+  </div>
+  <div class="psb-divider"></div>
+  <nav class="psb-menu">
+    <a class="psb-item" href="home.html">🏠 <span>Home</span></a>
+    <a class="psb-item" href="skills.html">💡 <span>My Skills</span></a>
+    <a class="psb-item" href="events.html">🎯 <span>Events</span></a>
+    <button class="psb-item" onclick="openSettings()">⚙️ <span>Settings</span></button>
+    <button class="psb-item" onclick="toggleTheme()">🌙 <span>Dark / Light</span></button>
+    <button class="psb-item psb-logout" onclick="logOut()">🚪 <span>Log Out</span></button>
+  </nav>
+  <div class="psb-footer">SkillEve v1.0</div>
+</div>
+<div class="psb-overlay" id="psbOverlay" onclick="toggleProfileSidebar()"></div>
+
+<header class="wa-header glass">
+  <button class="wa-back-btn" onclick="go('skills.html')">&#8592;</button>
+  <div class="wa-user">
+    <div class="avatar" id="chatAvatar">?</div>
+    <div class="wa-user-text">
+      <div class="wa-name" id="chatUser">Loading…</div>
+      <div class="wa-status" id="chatStatus">🟢 Online</div>
+    </div>
+  </div>
+  <div class="wa-header-actions">
+    <button class="icon-btn" title="Video Call" onclick="showToast('📹 Video call coming soon!')">📹</button>
+    <button class="icon-btn" title="Voice Call" onclick="showToast('📞 Voice call coming soon!')">📞</button>
+    <button class="icon-btn wa-more-btn" title="More" onclick="toggleChatMenu()">&#8942;</button>
+    <div class="wa-menu glass" id="waMenu">
+      <button onclick="showToast('📘 Resources coming soon!')">📘 Resources</button>
+      <button onclick="showToast('💳 Pay feature coming soon!')">💰 Pay for Session</button>
+      <button onclick="clearChat()">🗑️ Clear Chat</button>
+      <button onclick="toggleProfileSidebar()">👤 Profile</button>
+    </div>
+  </div>
+</header>
+
+<div class="chat-date-divider" id="chatDateDivider">Today</div>
+
+<div id="chatBox" class="chat-box"></div>
+
+<div class="wa-input-bar">
+  <button class="wa-emoji-btn" onclick="showToast('😊 Emoji picker coming soon!')">😊</button>
+  <div class="wa-input-wrap glass">
+    <input id="msg" placeholder="Type a message" onkeydown="if(event.key==='Enter')send()">
+    <button class="wa-attach-btn" onclick="showToast('📎 Attach coming soon!')">📎</button>
+  </div>
+  <button class="wa-send-btn" id="waSendBtn" onclick="send()">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+  </button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

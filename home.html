@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKILLEVE — Choose Your Path</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-home">
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav class="navbar glass">
+  <div class="logo">SKILL<span class="accent">EVE</span></div>
+  <div class="nav-center">
+    <a href="home.html" class="nav-link active">Home</a>
+    <a href="skills.html" class="nav-link">Skills</a>
+    <a href="events.html" class="nav-link">Events</a>
+  </div>
+  <div class="nav-right">
+    <span class="greeting" id="greeting">Welcome back 👋</span>
+    <button class="profile-btn" onclick="toggleProfileSidebar()" title="Profile">
+      <div class="nav-avatar">U</div>
+    </button>
+  </div>
+</nav>
+<!-- PROFILE SIDEBAR -->
+<div class="profile-sidebar glass" id="profileSidebar">
+  <div class="psb-header">
+    <div class="psb-avatar" id="psbAvatar">U</div>
+    <div>
+      <div class="psb-name" id="psbName">Guest User</div>
+      <div class="psb-email" id="psbEmail">guest@skilleve.app</div>
+    </div>
+  </div>
+  <div class="psb-divider"></div>
+  <nav class="psb-menu">
+    <a class="psb-item" href="home.html">🏠 <span>Home</span></a>
+    <a class="psb-item" href="skills.html">💡 <span>My Skills</span></a>
+    <a class="psb-item" href="events.html">🎯 <span>Events</span></a>
+    <button class="psb-item" onclick="openSettings()">⚙️ <span>Settings</span></button>
+    <button class="psb-item" onclick="toggleTheme()">🌙 <span>Dark / Light</span></button>
+    <button class="psb-item psb-logout" onclick="logOut()">🚪 <span>Log Out</span></button>
+  </nav>
+  <div class="psb-footer">SkillEve v1.0</div>
+</div>
+<div class="psb-overlay" id="psbOverlay" onclick="toggleProfileSidebar()"></div>
+
+<section class="hero hero-sm">
+  <h1>Choose Your <span class="gradient-text">Path</span></h1>
+  <p class="hero-sub">What would you like to do today?</p>
+</section>
+
+<div class="path-cards">
+
+  <div class="path-card" onclick="go('skills.html')">
+    <div class="path-icon">💡</div>
+    <div class="path-content">
+      <h3>Skills</h3>
+      <p>Teach what you know. Learn what you don't. Match with peers and grow together.</p>
+      <ul class="path-features">
+        <li>✓ Browse 50+ skills</li>
+        <li>✓ Match with learners</li>
+        <li>✓ Real-time chat</li>
+      </ul>
+    </div>
+    <div class="path-arrow">→</div>
+  </div>
+
+  <div class="path-card path-card-alt" onclick="go('events.html')">
+    <div class="path-icon">🎯</div>
+    <div class="path-content">
+      <h3>Events</h3>
+      <p>Join hackathons, workshops and academic events. Level up beyond the classroom.</p>
+      <ul class="path-features">
+        <li>✓ Live & upcoming events</li>
+        <li>✓ Register instantly</li>
+        <li>✓ Build your portfolio</li>
+      </ul>
+    </div>
+    <div class="path-arrow">→</div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

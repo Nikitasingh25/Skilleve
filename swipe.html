@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKILLEVE — Find a Match</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-swipe">
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav class="navbar glass">
+  <div class="logo">SKILL<span class="accent">EVE</span></div>
+  <div class="nav-links">
+    <button class="btn btn-ghost" onclick="go('skills.html')">← Back</button>
+  </div>
+</nav>
+
+<section class="page-header">
+  <h1>Find Your <span class="gradient-text">Match</span></h1>
+  <p class="hero-sub">Skill: <strong id="currentSkill">—</strong></p>
+</section>
+
+<div class="swipe-area">
+  <div class="swipe-counter">
+    <span id="swipeIndex">1</span> / <span id="swipeTotal">2</span>
+  </div>
+
+  <div id="profileCard" class="profile-card glass">
+    <!-- filled by JS -->
+  </div>
+
+  <div class="swipe-actions">
+    <button class="swipe-btn skip-btn" onclick="skip()" title="Skip">
+      <span>✕</span>
+      <small>Skip</small>
+    </button>
+    <button class="swipe-btn match-btn" onclick="like()" title="Match">
+      <span>♥</span>
+      <small>Match</small>
+    </button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

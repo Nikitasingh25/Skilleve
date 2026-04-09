@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKILLEVE — Exchange Skills. Grow Smarter.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-landing">
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<nav class="navbar glass">
+  <div class="logo">SKILL<span class="accent">EVE</span></div>
+  <div class="nav-center">
+    <a href="home.html" class="nav-link">Home</a>
+    <a href="skills.html" class="nav-link">Skills</a>
+    <a href="events.html" class="nav-link">Events</a>
+  </div>
+  <div class="nav-right">
+    <a href="home.html" class="btn btn-ghost btn-sm">Get Started</a>
+    <button class="profile-btn" onclick="toggleProfileSidebar()" title="Profile">
+      <div class="nav-avatar">U</div>
+    </button>
+  </div>
+</nav>
+<!-- PROFILE SIDEBAR -->
+<div class="profile-sidebar glass" id="profileSidebar">
+  <div class="psb-header">
+    <div class="psb-avatar" id="psbAvatar">U</div>
+    <div>
+      <div class="psb-name" id="psbName">Guest User</div>
+      <div class="psb-email" id="psbEmail">guest@skilleve.app</div>
+    </div>
+  </div>
+  <div class="psb-divider"></div>
+  <nav class="psb-menu">
+    <a class="psb-item" href="home.html">🏠 <span>Home</span></a>
+    <a class="psb-item" href="skills.html">💡 <span>My Skills</span></a>
+    <a class="psb-item" href="events.html">🎯 <span>Events</span></a>
+    <button class="psb-item" onclick="openSettings()">⚙️ <span>Settings</span></button>
+    <button class="psb-item" onclick="toggleTheme()">🌙 <span>Dark / Light</span></button>
+    <button class="psb-item psb-logout" onclick="logOut()">🚪 <span>Log Out</span></button>
+  </nav>
+  <div class="psb-footer">SkillEve v1.0</div>
+</div>
+<div class="psb-overlay" id="psbOverlay" onclick="toggleProfileSidebar()"></div>
+
+<section class="hero">
+  <div class="hero-badge">🚀 Peer-to-Peer Learning Platform</div>
+  <h1 class="hero-title">Exchange skills.<br><span class="gradient-text">Learn faster.</span><br>Grow smarter.</h1>
+  <p class="hero-sub">A platform which fosters peer-to-peer learning while participating in events enhancing academics and curricular activities.</p>
+  <div class="hero-actions">
+    <button class="btn btn-primary" onclick="go('home.html')">Start Learning →</button>
+    <button class="btn btn-ghost" onclick="go('events.html')">Explore Events</button>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Skills</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-num">200+</span><span class="stat-label">Learners</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Events</span></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="how-label">How It Works</div>
+  <h2 class="how-title">Three steps to <span class="gradient-text">start growing</span></h2>
+  <div class="how-cards">
+    <div class="how-card">
+      <div class="how-step">01</div>
+      <div class="how-icon">🙋</div>
+      <h4>Create Your Profile</h4>
+      <p>List the skills you have and the skills you want to learn.</p>
+    </div>
+    <div class="how-connector">→</div>
+    <div class="how-card">
+      <div class="how-step">02</div>
+      <div class="how-icon">🤝</div>
+      <h4>Match with Peers</h4>
+      <p>Browse profiles, swipe to connect and find your ideal learning partner.</p>
+    </div>
+    <div class="how-connector">→</div>
+    <div class="how-card">
+      <div class="how-step">03</div>
+      <div class="how-icon">🚀</div>
+      <h4>Exchange & Grow</h4>
+      <p>Chat, schedule sessions, attend events and level up together.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / COPYRIGHT -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">SKILL<span class="accent">EVE</span></div>
+    <p class="footer-copy">© 2025 SkillEve. All rights reserved. Built for peer-to-peer learning.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
